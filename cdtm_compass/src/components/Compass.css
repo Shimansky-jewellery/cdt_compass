@@ -1,0 +1,184 @@
+.compassPage {
+  min-height: calc(100svh - 5.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  color: var(--color-ivory);
+  background: var(--color-charcoal);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.compassHeader {
+  color: var(--color-ivory);
+}
+
+.compassHeader h1 {
+  margin: 0.25rem 0 0;
+  color: inherit;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 600;
+}
+
+.compassLabel,
+.compassStatus,
+.compassAccuracy,
+.compassHint {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+
+.compassLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.compassStart {
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 999px;
+  color: var(--color-charcoal);
+  background: var(--color-gold);
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.compassStart:hover,
+.compassStart:focus-visible {
+  background: var(--color-gold-light);
+}
+
+.compassDial {
+  width: min(70vw, 300px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(244, 241, 234, 0.2);
+  border-radius: 50%;
+}
+
+.compassArrow {
+  width: 75%;
+  height: 75%;
+  fill: var(--color-gold);
+  transition: transform 0.2s linear;
+}
+
+.compassDistance {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.compassArrived {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.compassError {
+  margin: 0;
+  color: #ff7a7a;
+  font-size: 0.9rem;
+}
+
+.floorGuidance {
+  width: min(100%, 30rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.floorGuidance h2 {
+  margin: 0;
+  color: var(--color-ivory);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.floorOptions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(244, 241, 234, 0.35);
+  border-radius: 0.4rem;
+}
+
+.floorOption {
+  min-width: 0;
+  min-height: 44px;
+  padding: 0.55rem 0.35rem;
+  color: var(--color-ivory);
+  background: transparent;
+  border: 0;
+  border-right: 1px solid rgba(244, 241, 234, 0.25);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.floorOption:last-child {
+  border-right: 0;
+}
+
+.floorOption:hover,
+.floorOption:focus-visible {
+  background: rgba(197, 162, 77, 0.18);
+  outline-offset: -3px;
+}
+
+.floorOption--selected {
+  color: var(--color-charcoal);
+  background: var(--color-gold);
+  font-weight: 700;
+}
+
+.floorOption--selected:hover,
+.floorOption--selected:focus-visible {
+  background: var(--color-gold-light);
+}
+
+.floorMessage,
+.compassFloorPriority {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.floorMessage {
+  color: var(--color-ivory);
+  font-size: 0.95rem;
+}
+
+.floorArrowIcon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: var(--color-gold-light);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.compassFloorPriority {
+  max-width: 36rem;
+  color: var(--color-gold-light);
+  font-size: clamp(1.2rem, 4vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.compassFloorPriority .floorArrowIcon {
+  width: 1.4rem;
+  height: 1.4rem;
+}

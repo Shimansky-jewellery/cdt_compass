@@ -1,0 +1,9 @@
+.appShell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.routeContent {
+  flex: 1;
+}

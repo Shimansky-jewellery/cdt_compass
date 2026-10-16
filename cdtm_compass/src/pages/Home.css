@@ -1,0 +1,287 @@
+.homePage {
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+.hero {
+  min-height: min(76svh, 48rem);
+  display: flex;
+  align-items: center;
+  color: var(--color-ivory);
+  background:
+    linear-gradient(90deg, rgba(16, 17, 17, 0.82), rgba(16, 17, 17, 0.3)),
+    linear-gradient(rgba(16, 17, 17, 0.18), rgba(16, 17, 17, 0.34)),
+    url("https://www.capetowndiamondmuseum.org/wp-content/uploads/2025/04/capetown-diamond-museum.webp")
+      center / cover no-repeat;
+}
+
+.heroContent {
+  width: min(100% - 2.5rem, 76rem);
+  margin-inline: auto;
+  padding-block: 5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--color-gold-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: var(--color-gold-light);
+}
+
+.hero h1 {
+  max-width: 50rem;
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 5.8rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.heroSubtitle {
+  max-width: 39rem;
+  margin: 1.5rem 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.button {
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.3rem;
+  border: 1px solid transparent;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button--gold {
+  color: var(--color-charcoal);
+  background: var(--color-gold);
+}
+
+.button--gold:hover,
+.button--gold:focus-visible {
+  background: var(--color-gold-light);
+}
+
+.button--outline {
+  color: var(--color-ivory);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(20, 20, 20, 0.1);
+}
+
+.button--outline:hover,
+.button--outline:focus-visible {
+  color: var(--color-charcoal);
+  background: var(--color-ivory);
+}
+
+.button--dark {
+  color: var(--color-ivory);
+  background: var(--color-charcoal);
+}
+
+.button--dark:hover,
+.button--dark:focus-visible {
+  color: var(--color-charcoal);
+  background: var(--color-gold);
+}
+
+.sectionWrap {
+  width: min(100% - 2.5rem, 76rem);
+  margin-inline: auto;
+}
+
+.experienceSection {
+  padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+.sectionHeading {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.sectionHeading h2,
+.tourContent h2,
+.visitBlock h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.sectionHeading h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.experienceCard {
+  min-width: 0;
+  background: var(--color-white);
+}
+
+.experienceImage {
+  min-height: 13rem;
+  background: var(--color-placeholder);
+}
+
+.experienceCardContent {
+  padding: 1.5rem;
+}
+
+.experienceCard h3 {
+  margin: 0 0 0.75rem;
+  color: var(--color-gold-dark);
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+}
+
+.experienceCard p {
+  min-height: 3rem;
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.textLink {
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration-color: var(--color-gold);
+  text-underline-offset: 0.25rem;
+  text-transform: uppercase;
+}
+
+.textLink span {
+  margin-left: 0.3rem;
+  color: var(--color-gold-dark);
+}
+
+.tourSection {
+  color: var(--color-ivory);
+  background: var(--color-charcoal);
+}
+
+.tourContent {
+  padding-block: clamp(4rem, 9vw, 7rem);
+  text-align: center;
+}
+
+.tourContent .eyebrow {
+  color: var(--color-gold-light);
+}
+
+.tourContent h2 {
+  color: inherit;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.tourContent > p:not(.eyebrow) {
+  max-width: 48rem;
+  margin: 1.25rem auto 1.75rem;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.visitSection {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+  background: var(--color-paper);
+}
+
+.visitBlock {
+  padding: 1.5rem 0;
+}
+
+.visitBlock h2 {
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.visitBlock p:not(.eyebrow) {
+  margin: 0.5rem 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.visitBlock p a {
+  color: inherit;
+  text-decoration-color: var(--color-gold);
+  text-underline-offset: 0.2rem;
+}
+
+.visitBlock .button {
+  margin-top: 0.8rem;
+}
+
+@media (min-width: 600px) {
+  .experienceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .experienceImage {
+    min-height: 15rem;
+  }
+
+  .visitSection {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .visitBlock {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .experienceGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .heroContent,
+  .sectionWrap {
+    width: min(100% - 2rem, 76rem);
+  }
+
+  .heroActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

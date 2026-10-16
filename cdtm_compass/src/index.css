@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap");
+
+:root {
+  --color-charcoal: #171715;
+  --color-ink: #22211f;
+  --color-paper: #f5f3ee;
+  --color-white: #fff;
+  --color-ivory: #f4f1ea;
+  --color-muted: #716e67;
+  --color-gold: #c5a24d;
+  --color-gold-light: #dfc273;
+  --color-gold-dark: #92752f;
+  --color-placeholder: #dedbd4;
+  --color-border-dark: rgba(244, 241, 234, 0.16);
+  --font-body: "DM Sans", Arial, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: var(--color-charcoal);
+  background: var(--color-gold-light);
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}

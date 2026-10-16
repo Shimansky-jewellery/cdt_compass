@@ -1,0 +1,138 @@
+.siteHeader {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  color: var(--color-ivory);
+  background: var(--color-charcoal);
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.siteNav {
+  width: 100%;
+  min-height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.siteLogo {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.siteLogo img {
+  display: block;
+  width: clamp(9rem, 17vw, 12rem);
+  height: auto;
+}
+
+.navToggle {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0;
+  color: var(--color-ivory);
+  background: transparent;
+  border: 1px solid var(--color-border-dark);
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.navToggle span {
+  width: 1.2rem;
+  height: 2px;
+  background: currentColor;
+}
+
+.navLinks {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1.25rem;
+  list-style: none;
+  background: var(--color-charcoal);
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.navLinks--open {
+  display: flex;
+}
+
+.navLinks a {
+  display: block;
+  padding: 0.75rem 0.25rem;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navLinks a:hover,
+.navLinks a:focus-visible,
+.navLinks a.active {
+  color: var(--color-gold-light);
+}
+
+.navLinks .navCompass {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: var(--color-charcoal);
+  background: var(--color-gold);
+  text-align: center;
+  font-weight: 700;
+}
+
+.navLinks .navCompass:hover,
+.navLinks .navCompass:focus-visible {
+  color: var(--color-charcoal);
+  background: var(--color-gold-light);
+}
+
+@media (min-width: 1100px) {
+  .siteNav {
+    min-height: 6rem;
+    padding-inline: clamp(1.5rem, 4vw, 4rem);
+  }
+
+  .navToggle {
+    display: none;
+  }
+
+  .navLinks,
+  .navLinks--open {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(0.35rem, 1vw, 1rem);
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+
+  .navLinks a {
+    padding: 0.5rem 0.3rem;
+    font-size: clamp(0.72rem, 0.85vw, 0.9rem);
+    white-space: nowrap;
+  }
+
+  .navLinks .navCompass {
+    margin-top: 0;
+    margin-left: 0.3rem;
+    padding: 0.75rem 1rem;
+  }
+}
